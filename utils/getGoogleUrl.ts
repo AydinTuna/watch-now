@@ -4,14 +4,14 @@ const getGoogleOAuthUrl = () => {
     const options = {
         redirect_uri: process.env.NEXT_PUBLIC_GOOGLE_OAUTH_REDIRECT_URL as string,
         client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID as string,
-        access_type: "offline",
-        response_type: "code",
+        response_type: "token",
         prompt: "consent",
         scope: ["https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/youtube.readonly"].join(" "),
+        include_granted_scopes: 'true',
+        state: 'pass-through value'
     }
 
     const qs = new URLSearchParams(options);
-
     return `${rootUrl}?${qs.toString()}`;
 }
 
