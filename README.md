@@ -1,3 +1,5 @@
+## The project has been stopped because YouTube Data API V3 does not provide "Watch Later" playlist info for users. Since I don't want to use web scraping to get playlist info, I stopped my project.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
